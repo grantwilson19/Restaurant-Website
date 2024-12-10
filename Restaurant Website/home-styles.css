@@ -1,0 +1,410 @@
+body {
+    background-color: rgb(18, 25, 43);
+    font-family: 'Gantari', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100%; /* Ensures the body grows to fit content */
+}
+
+.shape4 {
+    position: absolute;
+    top: 50px; /* Space from top */
+    left: 2.5%; /* Space from left */
+    right: 10px; /* Space from right */
+    bottom: 2%; /* Space from bottom */
+    border: 5px solid transparent; /* Transparent border as a placeholder */
+    border-image: linear-gradient(to right, #fefcea 0%, #f1da36 100%); /* Apply gradient as border */
+    border-image-slice: 1; /* Ensure the gradient fills the border */
+    pointer-events: none; /* Make it non-interactive */
+    z-index: -1; /* Ensure it's behind everything else */
+    background: transparent; /* Keep background transparent for outline effect */
+}
+
+.shape5 {
+    position: absolute;
+    top: 60px; /* Space from top */
+    bottom: 30px; /* Adjust space from the bottom */
+    left: 3.2%;
+    right: 20px;
+    border: 3px solid transparent; /* Transparent border as a placeholder */
+    border-image: linear-gradient(to left, #fefcea 0%, #f1da36 100%); /* Apply gradient as border */
+    border-image-slice: 1; /* Ensure the gradient fills the border */
+    pointer-events: none; /* Ensure it doesn't interfere with interaction */
+    z-index: -1;
+    background: transparent; /* Keep background transparent for outline effect */
+}
+
+.site-header {
+    position: absolute; /* Allows precise positioning */
+    top: 2px;          /* Adjusts the distance from the top of the screen */
+    left: 50%;          /* Centers horizontally */
+    transform: translateX(-50%); /* Corrects centering offset */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;    /* Center content horizontally */
+    justify-items: center;
+    font-family: 'Gantari', serif; /* Apply font to both h1 and h2 */
+    color: white;           /* Ensure text color is visible */
+    justify-content: center;
+    text-align: center;     /* Center-align text */
+    z-index: 10;
+}
+
+.site-header h1, .site-header h2 {
+    margin: 0; /* Remove default margins */
+    font-weight: 300; /* Light font weight */
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo {
+    display: flex;
+    width: 40px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    justify-content: center;
+}
+
+p {
+    color: darkblue;
+    font-family: 'Gantari', sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row; /* Align navigation links in a row */
+    justify-content: center; /* Center the nav links horizontally */
+    align-items: center; /* Vertically align the nav items */
+    position: sticky; /* Ensure proper placement without affecting other elements */
+    margin: 0 auto; /* Center the container */
+    width: 100%; /* Adjust to the width of the content */
+    padding: 20px; /* Add some space inside the container */
+    background-image: linear-gradient(rgb(18, 25, 43), rgba(255, 0, 0, 0));
+    margin-top: 50px;
+    top: 0px;
+    right: -15px;
+    z-index: 99;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between nav links */
+}
+
+li a {
+    display: block;
+    color: rgb(248, 248, 248);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gantari', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.2s ease, padding 0.2s ease;
+}
+
+li a:hover {
+    color: rgb(180, 154, 3); /* Color change on hover */
+}
+
+.home-content {
+    position: absolute;
+    z-index: 2;
+    top: 75%;
+    right: -32%;
+    width: 215%;
+    height: auto;
+}
+
+.site-image {
+    z-index: 2;
+    width: 18%;  /* Make image full width */
+    height: auto; /* Maintain aspect ratio */
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;  /* Add space below the image */
+    z-index: 2;
+}
+
+.SlideShow {
+    position: absolute; /* Stack images on top of each other */
+    top: 70px;
+    max-width: 1800px;
+    width: 100%;
+    max-height: 875px;
+    height: auto;
+    left: 51%;
+    transform: translateX(-50%); /* Centers the slideshow horizontally */
+    opacity: 0; /* Initially hidden */
+    align-items: center;
+    transition: opacity 1s ease-in-out; /* Smooth fade-in/out */
+}
+
+.SlideShow.active {
+    opacity: 1; /* Fully visible when active */
+    z-index: 1; /* Ensure the active image is on top */
+}
+
+.w3-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none; /* Prevent text selection */
+}
+
+.w3-button.w3-display-left {
+    left: 10px; /* Position the left button */
+}
+
+.w3-button.w3-display-right {
+    right: 10px; /* Position the right button */
+}
+
+.w3-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.shape1 {
+    position: absolute;
+    top: 20px; /* Adjust positioning */
+    bottom: 50px;
+    width: 100%;
+    top: 800px;
+    height: 100%;
+    height: 200px;
+    background-image: linear-gradient(rgba(18, 25, 43, 0), rgba(18, 25, 43));
+    z-index: 3; /* Behind all content */
+}
+
+.shape2 {
+    position: fixed;
+    top: 20px; /* Adjust positioning */
+    bottom: 50px;
+    width: 100%;
+    top: 800px;
+    height: 100%;
+    height: 200px;
+    right: 900px;
+    transform: rotate(90deg);
+    transform-origin: center;
+    background-image: linear-gradient(rgba(18, 25, 43, 0), rgba(18, 25, 43));
+    z-index: 3; /* Behind all content */
+}
+
+.shape3 {
+    position: fixed;
+    top: 20px; /* Adjust positioning */
+    bottom: 50px;
+    width: 100%;
+    top: 800px;
+    height: 100%;
+    height: 200px;
+    left: 900px;
+    transform: rotate(270deg);
+    transform-origin: center;
+    background-image: linear-gradient(rgba(18, 25, 43, 0), rgba(18, 25, 43));
+    z-index: 3; /* Behind all content */
+}
+
+.home-2 {
+    position: relative;
+    margin-top: 1000px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    align-items: flex-start;
+    gap: 100px; /* Adds space between the image, welcome text, and reservation box */
+    z-index: 2;
+}
+
+
+.reservation-box {
+    position: relative;
+    top: 200px;
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #f1da36;
+    border-radius: 10px;
+    background-color: rgba(18, 25, 43, 0.9);
+    color: white;
+    text-align: center;
+}
+
+.reservation-box h2 {
+    font-size: 2.0em;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    font-family: 'Zilla Slab';
+    transform: scaleX(1.4);
+}
+
+.reservation-box p {
+    top: 900px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-family: 'Gantari', sans-serif;
+    color: aliceblue;
+}
+
+.reservation-button {
+    padding: 10px 50px;
+    font-size: 1em;
+    color: #fefcea;
+    background-color: #f1db3600;
+    border: 2px solid #f1da36;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    font-family: 'Zilla Slab';
+}
+
+.reservation-button:hover {
+    background-color: #d1b536; /* Darken button on hover for effect */
+}
+
+.res-decor.top {
+    width: 10%;
+    height: auto;
+    margin: 0;
+    background-color: rgba(18, 25, 43);
+    transform: translate(-540%, 225%);
+}
+
+.res-decor.bottom {
+    width: 10%;
+    height: auto;
+    margin: 0;
+    background-color: rgba(18, 25, 43);
+    transform: translate(540%, -225%);
+}
+
+.interior-photo {
+    width: 90% auto;
+    height: 50%;
+}
+
+.home-3 {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: flex-start;
+    gap: 100px; /* Adds space between the image, welcome text, and reservation box */
+    z-index: 2;
+}
+
+
+.tour-box {
+    position: relative;
+    top: 100px;
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #f1da36;
+    border-radius: 10px;
+    background-color: rgba(18, 25, 43, 0.9);
+    color: white;
+    text-align: center;
+}
+
+.tour-box h2 {
+    font-size: 2.0em;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    font-family: 'Zilla Slab';
+    transform: scaleX(1.4);
+}
+
+.tour-box p {
+    top: 900px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-family: 'Gantari', sans-serif;
+    color: aliceblue;
+}
+
+.tour-button {
+    padding: 10px 50px;
+    font-size: 1em;
+    color: #fefcea;
+    background-color: #f1db3600;
+    border: 2px solid #f1da36;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    font-family: 'Zilla Slab';
+}
+
+.tour-button:hover {
+    background-color: #d1b536; /* Darken button on hover for effect */
+}
+
+.tour-decor.top {
+    width: 20%;
+    height: auto;
+    margin: 0;
+    background-color: rgb(18, 25, 43);
+    transform: translate(-5%, -90%);
+}
+
+.tour-decor.bottom {
+    width: 20%;
+    height: auto;
+    margin: 0;
+    background-color: rgb(18, 25, 43);
+    transform: translate(-5%, 85%);
+}
+
+.tour-photo {
+    width: 60%;
+    height: 10%;
+}
+
+
+.background-image {
+    position: absolute; /* Precise positioning */
+    top: 1550px; /* Adjust this value to control vertical placement */
+    left: 0; /* Move to the left */
+    width: 100%; /* Ensures it spans the full width */
+    height: auto; /* Maintain aspect ratio */
+    pointer-events: none; /* Prevent interactions */
+    z-index: -1; /* Place behind other elements */
+}
+
+.bkgrd-img {
+    position: absolute;
+    top: 0;
+    left: -500px; /* Adjust to move further left */
+    width: 50%; /* Set appropriate width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Proper scaling */
+    pointer-events: none; /* Prevent the image from interfering with user actions */
+}
+
+footer {
+    display: block;
+    text-align: right;
+    background-color:#d1b536;
+    font-family: 'Gantari', sans-serif;
+    font-size: large;
+    font-weight: 500;
+    color: aliceblue;
+    padding: 5px;
+    padding-right: 100px;
+}

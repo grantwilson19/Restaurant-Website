@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="anchor.png">
+    <link rel="stylesheet" href="home-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gantari&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Zilla Slab' rel='stylesheet'>
+    <title>Seal Beach Fish Co.</title>
+</head>
+<body>
+    <div class="nav-container">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="fish.html">Fish</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+    <div class="home-content">
+        <img src="fishcologo.jpeg" class="site-image">
+    </div>
+    <header class="site-header">
+        <h1>1025 PCH, Seal Beach, CA 90740</h1>
+        <img src="anchor.png" class="header-logo">
+        <h2>Phone: 562.431.5222</h2>
+    </header>
+    <img class="SlideShow" src="sushi 3.jpg">
+    <img class="SlideShow" src="sushi rolls.jpg">
+    <img class="SlideShow" src="more sushi rolls.jpg">
+    
+    <!-- Add the new shape elements here -->
+    <div class="shape4"></div>
+    <div class="shape5"></div>
+
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+    <div class="shape3"></div>
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    <script>
+        var myIndex = 0;
+        var slides = document.getElementsByClassName("SlideShow");
+        carousel();
+
+        function carousel() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active"); // Remove active class from all images
+            }
+            myIndex++;
+            if (myIndex > slides.length) { myIndex = 1; } // Loop back to the first image
+            slides[myIndex - 1].classList.add("active"); // Add active class to the current image
+            setTimeout(carousel, 5000); // Change image every 5 seconds
+        }
+    </script>
+
+    <section class="home-2">
+        <img class="interior-photo" src="interior.webp">
+        <div class="reservation-box">
+            <img src="anchor.png" class="res-decor top" alt="Decoration Left">
+            <div class="reservation-box-content">
+                <h2 class="reservation-title">BOOK A TABLE</h2>
+                <p class="reservation-subtext">We would love to have you as our guest!</p>
+                <button class="reservation-button">RESERVATIONS</button>
+            </div>
+            <img src="anchor.png" class="res-decor bottom" alt="Decoration Right">
+        </div>
+    </section>
+
+    <section class="home-3">
+        <div class="tour-box">
+            <img src="tuna.png" class="tour-decor top" alt="Decoration Left">
+            <div class="tour-box-content">
+                <h2 class="tour-title">TAKE A TOUR</h2>
+                <p class="tour-subtext">Come see how the fish is prepared!</p>
+                <button class="tour-button">TOURS</button>
+            </div>
+            <img src="tuna.png" class="tour-decor bottom" alt="Decoration Right">
+        </div>
+        <img class="tour-photo" src="tunachef.webp">
+    </section>
+
+    <div class="background-image">
+        <img src="anchor.png" class="bkgrd-img">
+    </div>
+
+    <footer>
+        <p>1025 PCH, Seal Beach, CA 90740</p>
+    </footer>
+</body>
+</html>

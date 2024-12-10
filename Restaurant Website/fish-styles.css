@@ -1,0 +1,127 @@
+body {
+    background-color: rgb(18, 25, 43);
+    font-family: 'Gantari', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100%; /* Ensures the body grows to fit content */
+}
+
+.shape4 {
+    position: absolute;
+    top: 50px; /* Space from top */
+    left: 2.5%; /* Space from left */
+    right: 10px; /* Space from right */
+    bottom: 2%; /* Space from bottom */
+    border: 5px solid transparent; /* Transparent border as a placeholder */
+    border-image: linear-gradient(to right, #fefcea 0%, #f1da36 100%); /* Apply gradient as border */
+    border-image-slice: 1; /* Ensure the gradient fills the border */
+    pointer-events: none; /* Make it non-interactive */
+    z-index: -1; /* Ensure it's behind everything else */
+    background: transparent; /* Keep background transparent for outline effect */
+}
+
+.shape5 {
+    position: absolute;
+    top: 60px; /* Space from top */
+    bottom: 30px; /* Adjust space from the bottom */
+    left: 3.2%;
+    right: 20px;
+    border: 3px solid transparent; /* Transparent border as a placeholder */
+    border-image: linear-gradient(to left, #fefcea 0%, #f1da36 100%); /* Apply gradient as border */
+    border-image-slice: 1; /* Ensure the gradient fills the border */
+    pointer-events: none; /* Ensure it doesn't interfere with interaction */
+    z-index: -1;
+    background: transparent; /* Keep background transparent for outline effect */
+}
+
+.site-header {
+    position: absolute; /* Allows precise positioning */
+    top: 2px;          /* Adjusts the distance from the top of the screen */
+    left: 50%;          /* Centers horizontally */
+    transform: translateX(-50%); /* Corrects centering offset */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;    /* Center content horizontally */
+    justify-items: center;
+    font-family: 'Gantari', serif; /* Apply font to both h1 and h2 */
+    color: white;           /* Ensure text color is visible */
+    justify-content: center;
+    text-align: center;     /* Center-align text */
+    z-index: 10;
+}
+
+.site-header h1, .site-header h2 {
+    margin: 0; /* Remove default margins */
+    font-weight: 300; /* Light font weight */
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo {
+    display: flex;
+    width: 40px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    justify-content: center;
+}
+
+p {
+    color: darkblue;
+    font-family: 'Gantari', sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row; /* Align navigation links in a row */
+    justify-content: center; /* Center the nav links horizontally */
+    align-items: center; /* Vertically align the nav items */
+    position: sticky; /* Ensure proper placement without affecting other elements */
+    margin: 0 auto; /* Center the container */
+    width: 100%; /* Adjust to the width of the content */
+    padding: 20px; /* Add some space inside the container */
+    background-image: linear-gradient(rgb(18, 25, 43), rgba(255, 0, 0, 0));
+    margin-top: 50px;
+    top: 0px;
+    right: -15px;
+    z-index: 99;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between nav links */
+}
+
+li a {
+    display: block;
+    color: rgb(248, 248, 248);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gantari', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.2s ease, padding 0.2s ease;
+}
+
+li a:hover {
+    color: rgb(180, 154, 3); /* Color change on hover */
+}
+
+footer {
+    display: block;
+    text-align: right;
+    background-color:#d1b536;
+    font-family: 'Gantari', sans-serif;
+    font-size: large;
+    font-weight: 500;
+    color: aliceblue;
+    padding: 5px;
+    padding-right: 100px;
+}
